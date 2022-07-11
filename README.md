@@ -2,22 +2,22 @@
     <img src="" alt="cacti-co-logo" width="700"/>
 </div>
 
-<br/>
-<br/>
+<br>
+<br>
 
 <div align="center">
     <p>🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿</p>
 </div>
 
-<br/>
+<br>
 
 <div align="center">
     <h2>🌵 Prototype of Cacti and Succulents Shopping App 🌱.</h2>
 </div>
 
-<br/>
+<br>
 
-<p align="center">
+<div align="center">
   <a href="https://reactnative.dev"
     ><img
       alt="React Native"
@@ -48,17 +48,18 @@
       alt="Stripe"
       src="https://img.shields.io/badge/Stripe-v-blueviolet?style=for-the-badge&amp;logo=appveyor"
   /></a>
-</p>
+</div>
 
-<br/>
+<br>
+<br>
 
 <div align="center">
     <p>🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿</p>
 </div>
 
 
-<br/>
-<br/>
+<br>
+<br>
 
 ## **⊙ Index**
 
@@ -68,8 +69,8 @@
 2. [Dependencies](#✦-dependencies)
 3. [Licenses](#✦-licenses)
 
-<br/>
-<br/>
+<br>
+<br>
 
 ## **⊙ About**
 
@@ -83,8 +84,8 @@
 
 > Store can be contextualized to other types of products 🏪.
 
-<br/>
-<br/>
+<br>
+<br>
 
 ## **⊙ Dependencies**
 
@@ -97,8 +98,8 @@ Project dependencies:
 -   [Shopify](https://es.shopify.com)
 -   [Stripe](https://stripe.com/es-us)
 
-<br/>
-<br/>
+<br>
+<br>
 
 ## **⊙ Licenses**
 
