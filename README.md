@@ -10,7 +10,6 @@
 </div>
 
 <br/>
-<br/>
 
 <div align="center">
     <h2>🌵 Prototype of Cacti and Succulents Shopping App 🌱.</h2>
