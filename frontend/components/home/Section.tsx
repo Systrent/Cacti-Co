@@ -11,9 +11,10 @@ export const Section = ({modelName, modelImage}) => {
         background-color: transparent;
         background-image: url(${modelImage});
         background-repeat: no-repeat;
+        
         background-size: cover;
         background-position: center;
-        height: 106vh;
+        height: 100vh;
         width: 100%;
         display: flex;
         justify-content: center;

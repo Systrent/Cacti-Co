@@ -8,7 +8,7 @@ export const LateralMenu = () => {
     <div
       css={css`
         display: flex;
-        justify-content: end;
+        justify-content: center;
       `}
     >
       <HeaderButton title="Shop"></HeaderButton>
