@@ -19,7 +19,6 @@ export const Section = ({modelName, modelImage}) => {
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        margin-top: -53px;
       `}
     >
 

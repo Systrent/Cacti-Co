@@ -8,7 +8,7 @@ export const Header = () => {
     <div
       css={css`
         background: transparent;
-        position: sticky;
+        position: fixed;
         top: 0;
         z-index: 2;
       `}
