@@ -1,4 +1,4 @@
-import HeaderButton from "./HeaderButton"
+import { HeaderButton } from "./HeaderButton"
 import { css } from "@emotion/react";
 //import { useUser } from "../../lib/user";
 

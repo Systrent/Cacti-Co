@@ -1,24 +1,32 @@
 import Head from "next/head";
 import { Layout } from "../components/layout/Layout";
 import { ModelsContext } from "../lib/models";
+import { Auth0Provider } from "@auth0/auth0-react";
 import "../styles/globals.css";
+import { useMemo } from "react";
 
 const MyApp = ({ Component, pageProps }) => {
+  const origin = useMemo(() => {
+    if (typeof window != "undefined") {
+      return window.location.origin;
+    }
+  }, []);
+
   return (
-    <div>
+    <Auth0Provider
+      domain={process.env.NEXT_PUBLIC_AUTH0_DOMAIN}
+      clientId={process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID}
+      redirectUri={origin}
+    >
       <Head>
-        <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="shortcut icon"
-          href="/images/favicon.png"
-          type="image/x-icon">
-        </link>
-        <title>Tesla React Clone</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com"/>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Purple+Purse&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+        <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon"/>
+        <title>Cacti-Co</title>
       </Head>
       <ModelsContext.Provider
         value={{
@@ -32,7 +40,7 @@ const MyApp = ({ Component, pageProps }) => {
           <Component {...pageProps} />
         </Layout>
       </ModelsContext.Provider>
-    </div>
+    </Auth0Provider>
   );
 };
 

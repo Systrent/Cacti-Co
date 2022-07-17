@@ -1,22 +1,24 @@
-import HeaderButton from "./HeaderButton"
 import { css } from "@emotion/react";
+import { HeaderButton } from "./HeaderButton"
 import { useModels } from "../../lib/models";
+import { LoginButton } from "./LoggingButton";
 
 export const MainMenu = () => {
   const { modelS, model3, modelX, modelY } = useModels();
   return (
-    <div
-      css={css`
-        display: flex;
-        justify-content: center;
-      `}
+    <div 
+      className="flex justify-center gap-20"
     >
-      <HeaderButton title={modelS.name}></HeaderButton>
-      <HeaderButton title={model3.name}></HeaderButton>
-      <HeaderButton title={modelX.name}></HeaderButton>
-      <HeaderButton title={modelY.name}></HeaderButton>
-      <HeaderButton title="Solar Roof"></HeaderButton>
-      <HeaderButton title="Solar Panels"></HeaderButton>
+      <div>
+        <HeaderButton title="Home" />
+        <HeaderButton title="About" />
+        <HeaderButton title="Orders" />
+        <HeaderButton title="Contact" />
+      </div>
+      <div>
+        <LoginButton/>
+      </div>
     </div>
+    
   );
 };

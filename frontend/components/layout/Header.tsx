@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import { MainMenu } from "./MainMenu";
-import ImageLayout from "../shared/ImageLayout";
+import { ImageLayout } from "../shared/ImageLayout";
 import { LateralMenu } from "./LateralMenu"
 
 export const Header = () => {

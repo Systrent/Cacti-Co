@@ -1,24 +1,26 @@
+import { css } from '@emotion/react';
 import Image from 'next/image';
 
 interface ImageLayoutProps {
-  children?: any;
   src: string;
   width: string;
   height: string;
   alt?: string;
 }
 
-const ImageLayout: React.FC<ImageLayoutProps> = ({ 
-  children,
+export const ImageLayout: React.FC<ImageLayoutProps> = ({ 
   src,
   width,
   height,
   alt
 }) => {
   return(
-  <div>
+  <div
+    css={css`
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    `}>
     <Image src={src} width={width} height={height} alt={alt} />
   </div>
 )}
-
-export default ImageLayout;
