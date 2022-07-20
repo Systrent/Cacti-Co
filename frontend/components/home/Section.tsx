@@ -11,7 +11,7 @@ export const Section = ({modelName, modelImage}) => {
       `}
     >
       <div
-        className="flex flex-col justify-center items-center bg-transparent gap-[580px]"
+        className="flex flex-col justify-center items-center bg-transparent gap-[425px]"
       >
         <Hero labelTitle={modelName} labelSubTitle="Order Online for" aSubtitle="Touchless Delivery"/>
         <Actions />

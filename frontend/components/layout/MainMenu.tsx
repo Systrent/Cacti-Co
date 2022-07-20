@@ -1,13 +1,12 @@
-import { css } from "@emotion/react";
 import { HeaderButton } from "./HeaderButton"
 import { useModels } from "../../lib/models";
 import { LoginButton } from "./LoggingButton";
 
 export const MainMenu = () => {
-  const { modelS, model3, modelX, modelY } = useModels();
+  //const { modelS, model3, modelX, modelY } = useModels();
   return (
     <div 
-      className="flex justify-center gap-20"
+      className="flex justify-center items-center gap-20"
     >
       <div>
         <HeaderButton title="Home" />
