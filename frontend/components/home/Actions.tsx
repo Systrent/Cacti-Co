@@ -1,15 +1,12 @@
-import { css } from '@emotion/react'
-import ActionButton from './ActionButton';
+import { ActionButton } from './ActionButton';
+
 export const Actions = () => {
-  return (
-    <div
-      css={css`
-        display: flex;
-        gap: 25px;
-      `}
+	return (
+		<div 
+      className='flex gap-6'
     >
-      <ActionButton label="Custom order" isDark={true}/>
-      <ActionButton label="Existing inventory" isDark={false}/>
-    </div>
-  );
+			<ActionButton label='Custom order' isDark />
+			<ActionButton label='Existing inventory' isDark={false} />
+		</div>
+	);
 };

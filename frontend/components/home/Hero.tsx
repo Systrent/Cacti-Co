@@ -1,6 +1,5 @@
-import { css } from '@emotion/react'
-import HeroSubtitle from './HeroSubtitle';
-import HeroTitle from './HeroTitle';
+import { HeroSubtitle } from './HeroSubtitle';
+import { HeroTitle } from './HeroTitle';
 
 interface HeroProps {
   labelTitle: string;
@@ -10,7 +9,9 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({labelTitle , labelSubTitle, aSubtitle}) => {
   return (
-    <div>
+    <div
+      className="flex flex-col gap-2"
+    >
       <HeroTitle label={labelTitle}/>
       <HeroSubtitle label={labelSubTitle} a={aSubtitle}/>
     </div>

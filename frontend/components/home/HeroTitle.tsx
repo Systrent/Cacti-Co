@@ -1,19 +1,13 @@
-import { css } from "@emotion/react";
-
 interface HeroTitleProps {
-  label: string;
+	label: string;
 }
 
-const HeroTitle: React.FC<HeroTitleProps> = ({ label }) => {
-  return(
-  <div 
-    css={css`
-      font-size: 45px;
-      font-weight: 500;
-    `}
-  >
-    <h2>{label}</h2>
-  </div>
-)}
-
-export default HeroTitle;
+export const HeroTitle: React.FC<HeroTitleProps> = ({ label }) => {
+	return (
+		<div
+      className="text-center text-4xl font-medium"
+		>
+			<h2>{label}</h2>
+		</div>
+	);
+};

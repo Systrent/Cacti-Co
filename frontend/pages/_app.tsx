@@ -1,9 +1,11 @@
+import "../styles/globals.css";
 import Head from "next/head";
+import { useMemo } from "react";
 import { Layout } from "../components/layout/Layout";
 import { ModelsContext } from "../lib/models";
 import { Auth0Provider } from "@auth0/auth0-react";
-import "../styles/globals.css";
-import { useMemo } from "react";
+
+
 
 const MyApp = ({ Component, pageProps }) => {
   const origin = useMemo(() => {
@@ -25,7 +27,7 @@ const MyApp = ({ Component, pageProps }) => {
         <link href="https://fonts.googleapis.com/css2?family=Purple+Purse&display=swap" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-        <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon"/>
+        <link rel="shortcut icon" href="/images/cacti_co_logo2.svg" type="image/x-icon"/>
         <title>Cacti-Co</title>
       </Head>
       <ModelsContext.Provider

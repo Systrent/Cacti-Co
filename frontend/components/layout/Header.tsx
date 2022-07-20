@@ -1,25 +1,12 @@
-import { css } from "@emotion/react";
 import { MainMenu } from "./MainMenu";
-import { ImageLayout } from "../shared/ImageLayout";
-import { LateralMenu } from "./LateralMenu"
 
 export const Header = () => {
   return (
     <div
-      css={css`
-        background: transparent;
-        position: fixed;
-        top: 0;
-        z-index: 2;
-        width: 100%;
-      `}
+      className="fixed bg-transparent top-0 z-10 w-full p-3"
     >
       <div
-        css={css`
-          padding: 15px 15px 25px;
-          display: flex;
-          justify-content: center;
-        `}
+        className="flex justify-center"
       >
         <MainMenu />
       </div>

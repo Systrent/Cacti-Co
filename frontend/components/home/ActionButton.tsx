@@ -1,40 +1,22 @@
-import { css } from "@emotion/react";
+import cx from "classnames";
 
 interface ActionButtonProps {
   label: string;
   isDark?: boolean;
 }
 
-const ActionButton: React.FC<ActionButtonProps> = ({ label, isDark}) => {
-  let backgroundColor = "rgba(0, 0, 0, 0.7)";
-  let textColor = "rgba(255, 255, 255, 0.85)";
-
-  if(!isDark){
-    backgroundColor = "rgba(255, 255, 255, 0.7)";
-    textColor = "rgba(0, 0, 0, 0.85)";
-  }
-  
+export const ActionButton: React.FC<ActionButtonProps> = ({ label, isDark}) => {
   return(
   <div 
-    css={css`
-      font-size: 14px;
-      font-weight: 400;
-    `}
+    className="font-normal text-xs"
   >
     <button
-    css={css`
-        background-color: ${backgroundColor};
-        color: ${textColor};
-        width: 250px;
-        border-radius: 20px;
-        padding: 8px 20px;
-        text-transform: uppercase;
-        white-space: nowrap;
-    `}
+      className={cx("w-60 rounded-full py-2 px-5 uppercase whitespace-nowrap", {
+        "bg-black/70 text-white": isDark == true,
+        "bg-white/70 text-black": !isDark,
+      })}
     >
       <p>{label}</p>
     </button>
   </div>
 )}
-
-export default ActionButton;
