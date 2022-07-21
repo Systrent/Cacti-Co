@@ -5,7 +5,7 @@ import { Hero } from "./Hero";
 export const Section = ({modelName, modelImage}) => {
   return (
     <div
-      className="bg-transparent bg-no-repeat bg-cover bg-center h-screen w-full flex flex-col justify-center items-center "
+      className="bg-transparent bg-no-repeat bg-cover bg-center h-screen w-full flex flex-col justify-center items-center"
       css={css`
         background-image: url(${modelImage});
       `}
