@@ -1,4 +1,5 @@
 import { MainProduct } from "./MainProduct";
+import { ProductList } from "./ProductList";
 
 export const HomeSection = ({imageCactus}) => {
   return (
@@ -8,16 +9,12 @@ export const HomeSection = ({imageCactus}) => {
       <div
         className="h-screen w-1/2 flex flex-col justify-center items-center px-20"
       >
-        <MainProduct image="images/cactus_1.png" name="Astrophytum Asterias V Type" description="Patrones de V en el tronco. No espinoso. Crecimiento a lo ancho en los primeros años, posteriormente en vertical. Reproducción por semilla o esqueje."/>
-        
+        <MainProduct image="images/cactus_1.png" name="Astrophytum Asterias V Type" description="Patrones de V en el tronco. No espinoso. Crecimiento a lo ancho en los primeros años, posteriormente en vertical. Reproducción por semilla o esqueje." price={10}/>
+
         <div
-          className="flex justify-center items-center"
+          className="h-20 w-full"
         >
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
+          <ProductList />
         </div>
       </div>
       <div
