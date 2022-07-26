@@ -1,10 +1,11 @@
 import { FastifyPluginAsync } from "fastify";
 import { repeat } from "ramda";
 import cors from "@fastify/cors";
+import { shopifyAPI } from "./shopifyAPI"
 
 export const app:FastifyPluginAsync = async(app) => {
     app.register(cors)
-
+	app.register(shopifyAPI);
     app.get("/", async(req, res) => {
         return [
 			{

@@ -14,7 +14,7 @@ export const Layout = ({ children }) => (
     className="min-h-screen"
   >
     <Header />
-    {children}
+      {children}
     <Footer />
   </div>
 );
