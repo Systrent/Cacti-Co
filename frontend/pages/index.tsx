@@ -1,4 +1,3 @@
-import { Section } from "../components/home/Section";
 import { useModels } from "../lib/models";
 import { HomeSection } from "../components/home/HomeSection";
 
@@ -8,10 +7,6 @@ const Page = () => {
   return(
     <div>
       <HomeSection imageCactus={"images/cactus_1.jpg"}/>
-      <Section modelName={modelS.name} modelImage={modelS.img}/>
-      <Section modelName={model3.name} modelImage={model3.img}/>
-      <Section modelName={modelX.name} modelImage={modelX.img}/>
-      <Section modelName={modelY.name} modelImage={modelY.img}/>
     </div>
   );
 };

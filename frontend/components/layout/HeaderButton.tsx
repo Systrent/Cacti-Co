@@ -1,18 +1,21 @@
+import Link from "next/link";
+
 interface HeaderButtonProps {
-  title?: string;
-  onClick?: any;
+  title: string;
+  href: string;
 }
 
 export const HeaderButton: React.FC<HeaderButtonProps> = ({
-  onClick,
   title,
+  href
 }) => {
   return (
-    <button
-      onClick={onClick}
-      className="bg-transparent hover:bg-white/50 hover:text-[#062821] whitespace-nowrap text-white text-sm font-semibold tracking-wide rounded-lg ease-in-out duration-200 py-1 px-6"
-    >
-      {title}
-    </button>
+    <Link href={href}>
+      <a
+        className="bg-transparent hover:bg-white/50 hover:text-[#062821] whitespace-nowrap text-white text-sm font-semibold tracking-wide rounded-lg ease-in-out duration-200 py-1 px-6"
+      >
+        {title}
+      </a>
+    </Link>
   );
 };

@@ -15,6 +15,7 @@ export const ProductList = () => {
     <div
       className="flex gap-3"
     >
+      {/* FIXME: Check map funtion */}
       {products_data.length > 0 &&
         products_data.map((product, index) => (
           <ProductCard product={product} key={index} />

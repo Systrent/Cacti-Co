@@ -9,10 +9,11 @@ export const MainMenu = () => {
       className="flex justify-center items-center gap-20"
     >
       <div>
-        <HeaderButton title="Home" />
-        <HeaderButton title="About" />
-        <HeaderButton title="Orders" />
-        <HeaderButton title="Contact" />
+        <HeaderButton title="Home" href="/" />
+        <HeaderButton title="About" href="/about" />
+        <HeaderButton title="Orders" href="/orders" />
+        <HeaderButton title="Contact" href="/contact" />
+        <HeaderButton title="Admin" href="/admin" />
       </div>
       <div>
         <LoginButton/>
