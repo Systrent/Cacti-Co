@@ -1,6 +1,7 @@
 import { Header } from "./Header";
 import { injectGlobal } from "@emotion/css";
 import { Footer } from "./Footer";
+
 injectGlobal`
     body{
         font-family: 'Quicksand', sans-serif;

@@ -1,13 +1,12 @@
-import { FastifyPluginAsync } from "fastify";
-import { repeat } from "ramda";
-import cors from "@fastify/cors";
-import { shopifyAPI } from "./shopifyAPI"
+import { FastifyPluginAsync } from 'fastify';
+import cors from '@fastify/cors';
+import { shopifyAPI } from './shopifyAPI';
 
-export const app:FastifyPluginAsync = async(app) => {
-    app.register(cors)
+export const app: FastifyPluginAsync = async (app) => {
+	app.register(cors);
 	app.register(shopifyAPI);
-    app.get("/", async(req, res) => {
-        return [
+	app.get('/', async (req, res) => {
+		return [
 			{
 				handle: 1,
 				name: 'Astrophytum Asterias V Type',
@@ -49,5 +48,5 @@ export const app:FastifyPluginAsync = async(app) => {
 				price: 10,
 			},
 		];
-    });
-}
+	});
+};
