@@ -10,7 +10,6 @@ export const MainMenu = () => {
     >
       <div>
         <HeaderButton title="Home" href="/" />
-        <HeaderButton title="About" href="/about" />
         <HeaderButton title="Orders" href="/orders" />
         <HeaderButton title="Contact" href="/contact" />
         <HeaderButton title="Admin" href="/admin" />
