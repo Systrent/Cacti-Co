@@ -19,6 +19,8 @@ const MyApp = ({ Component, pageProps }) => {
       domain={process.env.NEXT_PUBLIC_AUTH0_DOMAIN}
       clientId={process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID}
       redirectUri={origin}
+      audience="cacti-co"
+      scope="openid profile email"
     >
       <SWRConfig value={{ fetcher: backend_fetcher }}>
         <Head>

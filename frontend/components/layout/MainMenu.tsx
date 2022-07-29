@@ -1,6 +1,6 @@
 import { HeaderButton } from "./HeaderButton"
 import { useModels } from "../../lib/models";
-import { LoginButton } from "./LoggingButton";
+import { LoginButton } from "./LoginButton";
 
 export const MainMenu = () => {
   //const { modelS, model3, modelX, modelY } = useModels();

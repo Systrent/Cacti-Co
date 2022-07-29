@@ -1,10 +1,22 @@
-import { FastifyPluginAsync } from 'fastify';
 import cors from '@fastify/cors';
+import { FastifyPluginAsync } from 'fastify';
 import { shopifyAPI } from './shopifyAPI';
+import auth0Verify from 'fastify-auth0-verify';
+
+const adminPlugin: FastifyPluginAsync = async (app) => {
+	app.addHook('preValidation', app.authenticate);
+	app.register(shopifyAPI);
+}
 
 export const app: FastifyPluginAsync = async (app) => {
 	app.register(cors);
-	app.register(shopifyAPI);
+	app.register(adminPlugin);
+
+	await app.register(auth0Verify, {
+		domain: 'dev-y4086k8k.us.auth0.com',
+		audience: 'cacti-co',
+	});
+
 	app.get('/', async (req, res) => {
 		return [
 			{
