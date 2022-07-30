@@ -1,11 +1,12 @@
 import "../styles/globals.css";
 import Head from "next/head";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Layout } from "../components/layout/Layout";
 import { ModelsContext } from "../lib/models";
-import { Auth0Provider } from "@auth0/auth0-react";
+import { Auth0Provider, useAuth0 } from "@auth0/auth0-react";
 import { SWRConfig } from "swr";
 import { backend_fetcher } from "../lib/fetcher";
+import { TokenContext } from "../lib/tokenContext";
 
 const MyApp = ({ Component, pageProps }) => {
   const origin = useMemo(() => {
@@ -13,6 +14,31 @@ const MyApp = ({ Component, pageProps }) => {
       return window.location.origin;
     }
   }, []);
+
+  const AuthenticatedApp = ({children}) => {
+    //Fetch accessToken from API audience
+    const { getAccessTokenSilently } = useAuth0();
+    const [ token, setToken ] = useState('');
+    
+    useEffect(() => {
+      getAccessTokenSilently().then(myToken => {
+        console.log("----TOKEN----", myToken);
+        setToken(myToken);
+      })
+    }, []);
+
+    return (
+      <SWRConfig value={{ fetcher: backend_fetcher(token) }}>
+        <TokenContext.Provider
+          value={{
+            auth0Token: { value: token }
+          }}
+        >
+          {children}
+        </TokenContext.Provider>
+      </SWRConfig>
+    )
+  }
 
   return (
     <Auth0Provider
@@ -22,24 +48,15 @@ const MyApp = ({ Component, pageProps }) => {
       audience="cacti-co"
       scope="openid profile email"
     >
-      <SWRConfig value={{ fetcher: backend_fetcher }}>
+      <AuthenticatedApp>
         <Head>
           <link rel="shortcut icon" href="/images/cacti_co_favicon.svg" type="image/x-icon"/>
           <title>Cacti-Co</title>
         </Head>
-        <ModelsContext.Provider
-          value={{
-            modelS: { name: "Model S", img: "images/model_S.jpg" },
-            model3: { name: "Model 3", img: "images/model_3.jpg" },
-            modelX: { name: "Model X", img: "images/model_X.jpg" },
-            modelY: { name: "Model Y", img: "images/model_Y.jpg" } 
-          }}
-        >
           <Layout>
             <Component {...pageProps} />
           </Layout>
-        </ModelsContext.Provider>
-      </SWRConfig>
+      </AuthenticatedApp>
     </Auth0Provider>
   );
 };

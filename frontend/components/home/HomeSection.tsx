@@ -22,7 +22,7 @@ export const HomeSection = ({imageCactus}) => {
         <div
         className="h-screen w-1/2 flex flex-col justify-center items-center pl-32 pr-20 gap-4"
         >
-          <MainProduct image="images/cactus_1.png" name="Astrophytum Asterias V Type" description="Patrones de V en el tronco. No espinoso. Crecimiento a lo ancho en los primeros años, posteriormente en vertical. Reproducción por semilla o esqueje." price={10}/>
+          <MainProduct image="images/cactus_2.png" name="Astrophytum Asterias V Type" description="Patrones de V en el tronco. No espinoso. Crecimiento a lo ancho en los primeros años, posteriormente en vertical. Reproducción por semilla o esqueje." price={10}/>
 
           <div
             className="h-28 w-full"

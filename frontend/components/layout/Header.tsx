@@ -1,4 +1,4 @@
-import { Logo } from "../shared/Logo";
+import { Logo } from "./Logo";
 import { MainMenu } from "./MainMenu";
 
 export const Header = () => {

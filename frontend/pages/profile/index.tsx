@@ -1,6 +1,6 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import { useEffect } from "react";
-import { NewCactusForm } from "../../components/admin/NewCactusForm";
+import { NewCactusForm } from "../../components/profile/NewCactusForm";
 import { useModels } from "../../lib/models";
 
 const Admin = () => {
@@ -10,9 +10,9 @@ const Admin = () => {
     <div
         className="h-screen w-full flex justify-center items-center"
     >
-      <NewCactusForm />
+        <NewCactusForm />
     </div>
-  );
+    );
 };
 
 export default Admin;
