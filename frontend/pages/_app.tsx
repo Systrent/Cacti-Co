@@ -5,8 +5,33 @@ import { Layout } from "../components/layout/Layout";
 import { ModelsContext } from "../lib/models";
 import { Auth0Provider, useAuth0 } from "@auth0/auth0-react";
 import { SWRConfig } from "swr";
-import { backend_fetcher } from "../lib/fetcher";
+import { backendFetcher } from "../lib/fetcher";
 import { TokenContext } from "../lib/tokenContext";
+
+const AuthenticatedApp = ({ children }) => {
+  //Fetch accessToken from API audience
+  const { getAccessTokenSilently } = useAuth0();
+  const [token, setToken] = useState('');
+
+  useEffect(() => {
+    getAccessTokenSilently().then(myToken => {
+      console.log("----TOKEN----", myToken);
+      setToken(myToken);
+    })
+  }, []);
+
+  return (
+    <SWRConfig value={{ fetcher: backendFetcher(token) }}>
+      <TokenContext.Provider
+        value={{
+          auth0Token: { value: token }
+        }}
+      >
+        {children}
+      </TokenContext.Provider>
+    </SWRConfig>
+  )
+}
 
 const MyApp = ({ Component, pageProps }) => {
   const origin = useMemo(() => {
@@ -14,31 +39,6 @@ const MyApp = ({ Component, pageProps }) => {
       return window.location.origin;
     }
   }, []);
-
-  const AuthenticatedApp = ({children}) => {
-    //Fetch accessToken from API audience
-    const { getAccessTokenSilently } = useAuth0();
-    const [ token, setToken ] = useState('');
-    
-    useEffect(() => {
-      getAccessTokenSilently().then(myToken => {
-        console.log("----TOKEN----", myToken);
-        setToken(myToken);
-      })
-    }, []);
-
-    return (
-      <SWRConfig value={{ fetcher: backend_fetcher(token) }}>
-        <TokenContext.Provider
-          value={{
-            auth0Token: { value: token }
-          }}
-        >
-          {children}
-        </TokenContext.Provider>
-      </SWRConfig>
-    )
-  }
 
   return (
     <Auth0Provider

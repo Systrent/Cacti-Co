@@ -1,9 +1,11 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import axios from "axios";
 
 export const LoginButton: React.FC = () => {
   const { loginWithRedirect, user, logout } = useAuth0();
+
   return (
     <div
       className="flex">

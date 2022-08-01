@@ -2,6 +2,8 @@ import cors from '@fastify/cors';
 import auth0Verify from 'fastify-auth0-verify';
 import { FastifyPluginAsync } from 'fastify';
 import { shopifyAPI } from './shopifyAPI';
+import { dbPlugin } from './db';
+import { findProfile } from './routes/findProfile';
 
 const adminPlugin: FastifyPluginAsync = async (app) => {
 	app.addHook('preValidation', app.authenticate);
@@ -13,10 +15,12 @@ export const app: FastifyPluginAsync = async (app) => {
 		domain: 'dev-y4086k8k.us.auth0.com',
 		audience: 'cacti-co',
 	});
+	app.register(dbPlugin);
 	app.register(cors);
 	app.register(adminPlugin);
+	app.register(findProfile);
 
-	app.get('/', async (req, res) => {
+	app.get('/static', async (req, res) => {
 		return [
 			{
 				handle: 1,

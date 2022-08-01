@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import { useForm } from "react-hook-form";
-import { InputButton } from "./InputButton";
+import { InputButton } from "../profile/InputButton";
 
 // TODO: Continue class video w15d1 (2h 26min)
 
