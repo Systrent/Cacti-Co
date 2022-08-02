@@ -1,6 +1,6 @@
 import { shopifyAPI } from './shopifyAPI';
 
-export const backendFetcher = (token: string) => async (key: string) => {
+export const authenticatedFetcher = (token: string) => async (key: string) => {
 	const res = await shopifyAPI.get(key, {headers:{
 		"Authorization": `Bearer ${token}`
 	}});

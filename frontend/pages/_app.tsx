@@ -1,64 +1,21 @@
-import "../styles/globals.css";
-import Head from "next/head";
-import { useEffect, useMemo, useState } from "react";
-import { Layout } from "../components/layout/Layout";
-import { ModelsContext } from "../lib/models";
-import { Auth0Provider, useAuth0 } from "@auth0/auth0-react";
-import { SWRConfig } from "swr";
-import { backendFetcher } from "../lib/fetcher";
-import { TokenContext } from "../lib/tokenContext";
-
-const AuthenticatedApp = ({ children }) => {
-  //Fetch accessToken from API audience
-  const { getAccessTokenSilently } = useAuth0();
-  const [token, setToken] = useState('');
-
-  useEffect(() => {
-    getAccessTokenSilently().then(myToken => {
-      console.log("----TOKEN----", myToken);
-      setToken(myToken);
-    })
-  }, []);
-
-  return (
-    <SWRConfig value={{ fetcher: backendFetcher(token) }}>
-      <TokenContext.Provider
-        value={{
-          auth0Token: { value: token }
-        }}
-      >
-        {children}
-      </TokenContext.Provider>
-    </SWRConfig>
-  )
-}
+import '../styles/globals.css';
+import Head from 'next/head';
+import { Layout } from '../components/layout/Layout';
+import { SWRConfig } from 'swr';
+import { publicFetcher } from '../lib/publicFetcher';
 
 const MyApp = ({ Component, pageProps }) => {
-  const origin = useMemo(() => {
-    if (typeof window != "undefined") {
-      return window.location.origin;
-    }
-  }, []);
-
-  return (
-    <Auth0Provider
-      domain={process.env.NEXT_PUBLIC_AUTH0_DOMAIN}
-      clientId={process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID}
-      redirectUri={origin}
-      audience="cacti-co"
-      scope="openid profile email"
-    >
-      <AuthenticatedApp>
-        <Head>
-          <link rel="shortcut icon" href="/images/cacti_co_favicon.svg" type="image/x-icon"/>
-          <title>Cacti-Co</title>
-        </Head>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-      </AuthenticatedApp>
-    </Auth0Provider>
-  );
+	return (
+		<SWRConfig value={{ fetcher: publicFetcher }}>
+			<Head>
+				<link rel='shortcut icon' href='/images/cacti_co_favicon.svg' type='image/x-icon' />
+				<title>Cacti-Co</title>
+			</Head>
+			<Layout>
+				<Component {...pageProps} />
+			</Layout>
+		</SWRConfig>
+	);
 };
 
 export default MyApp;

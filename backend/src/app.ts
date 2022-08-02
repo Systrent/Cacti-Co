@@ -4,21 +4,24 @@ import { FastifyPluginAsync } from 'fastify';
 import { shopifyAPI } from './shopifyAPI';
 import { dbPlugin } from './db';
 import { findProfile } from './routes/findProfile';
+import { createProfile } from './routes/createProfile';
 
-const adminPlugin: FastifyPluginAsync = async (app) => {
-	app.addHook('preValidation', app.authenticate);
-	app.register(shopifyAPI);
-}
+// const adminPlugin: FastifyPluginAsync = async (app) => {
+// 	app.addHook('preValidation', app.authenticate);
+// 	app.register(shopifyAPI);
+// }
 
 export const app: FastifyPluginAsync = async (app) => {
 	await app.register(auth0Verify, {
 		domain: 'dev-y4086k8k.us.auth0.com',
 		audience: 'cacti-co',
 	});
+	
 	app.register(dbPlugin);
 	app.register(cors);
-	app.register(adminPlugin);
-	app.register(findProfile);
+	app.register(shopifyAPI, { prefix: 'products' });
+	app.register(findProfile, { prefix: 'profile' });
+	app.register(createProfile, { prefix: 'profile' });
 
 	app.get('/static', async (req, res) => {
 		return [

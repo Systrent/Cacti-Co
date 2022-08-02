@@ -3,7 +3,8 @@ import { FastifyPluginAsync } from 'fastify';
 import { SHOPIFY_SHOP, SHOPIFY_STOREFRONT_ACCESS_TOKEN } from './config';
 
 export const shopifyAPI: FastifyPluginAsync = async (app) => {
-    app.get('/products', async (req, res) => {
+    // app.get('/products', {preValidation: app.authenticate}, async (req, res) => {
+    app.get('/', async (req, res) => {
 		// Load the access token as per instructions above
 		const storefrontAccessToken: string = SHOPIFY_STOREFRONT_ACCESS_TOKEN;
 

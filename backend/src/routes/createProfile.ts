@@ -12,7 +12,7 @@ export const createProfile: FastifyPluginAsync = async (app) => {
 			contact: string;
 			favoriteFamilies: string[];
 		};
-	}>('/', async (req, res) => {
+	}>('/create', async (req, res) => {
 		const data = req.body;
 		req.log.info('Output');
 		console.log(data);

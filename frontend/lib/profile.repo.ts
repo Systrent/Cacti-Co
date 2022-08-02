@@ -11,7 +11,7 @@ interface IProfile {
 }
 
 export const createProfile = async (data: IProfile) => {
-	const res = await profileAPI.post('/', data);
+	const res = await profileAPI.post('/profile/create', data);
     console.log(res.data);
 	return res.data;
 };
