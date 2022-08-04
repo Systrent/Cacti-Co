@@ -12,6 +12,14 @@ interface IProfile {
 
 export const createProfile = async (data: IProfile) => {
 	const res = await profileAPI.post('/profile/create', data);
+	console.log('CREATE USER');
     console.log(res.data);
 	return res.data;
-};
+};	
+
+// export const findProfile = async () => {
+// 	const res = await profileAPI.get('/profile/find');
+// 	console.log('REQUEST USER');
+// 	console.log(res.data);
+// 	return res.data;
+// }

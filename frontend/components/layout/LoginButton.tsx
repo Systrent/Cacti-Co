@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const LoginButton: React.FC = () => {
   const { loginWithRedirect, user, logout } = useAuth0();
-  console.log(user);
+  // console.log(user);
   return (
     <div
       className="flex">

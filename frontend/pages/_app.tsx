@@ -3,8 +3,9 @@ import Head from 'next/head';
 import { Layout } from '../components/layout/Layout';
 import { SWRConfig } from 'swr';
 import { publicFetcher } from '../lib/publicFetcher';
+import { AppProps } from 'next/app';
 
-const MyApp = ({ Component, pageProps }) => {
+const MyApp = ({ Component, pageProps }: AppProps) => {
 	return (
 		<SWRConfig value={{ fetcher: publicFetcher }}>
 			<Head>

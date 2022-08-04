@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { createProfile } from '../../lib/profile.repo';
-import { InputButton } from '../admin/InputButton';
+import { InputButton } from '../info/InputButton';
 
 // TODO: Continue class video w15d1 (2h 26min)
 

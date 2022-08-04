@@ -44,7 +44,10 @@ export const AuthenticatedApp = ({children}) => {
 			audience='cacti-co'
 			scope='openid profile email'
 		>
-			<AuthenticatedApp2 {...children} />
+			<AuthenticatedApp2>
+				{children}
+			</AuthenticatedApp2>
+
 		</Auth0Provider>
 	);
 };

@@ -17,9 +17,14 @@ export const app: FastifyPluginAsync = async (app) => {
 		audience: 'cacti-co',
 	});
 	
+	//General
 	app.register(dbPlugin);
 	app.register(cors);
+
+	//Shopify
 	app.register(shopifyAPI, { prefix: 'products' });
+
+	//User Profile
 	app.register(findProfile, { prefix: 'profile' });
 	app.register(createProfile, { prefix: 'profile' });
 

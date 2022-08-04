@@ -1,6 +1,6 @@
 import { Document, Schema, model } from 'mongoose';
 
-export interface ProfileDocument extends Document {
+export interface profileDocument extends Document {
     auth0Id: string;
     firstName: string;
     lastName: string;
@@ -23,4 +23,4 @@ const schema = new Schema(
 	{ timestamps: true }
 );
 
-export const ProfileModel = model<ProfileDocument>('profile', schema);
+export const profileModel = model<profileDocument>('profile', schema);

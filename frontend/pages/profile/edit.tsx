@@ -1,17 +1,17 @@
+import { NewProfileForm } from '../../components/profile/NewProfileForm';
 import { Background } from '../../components/shared/Background';
 import { AuthenticatedApp } from '../../components/shared/AuthenticatedApp';
-import { ProfileCard } from '../../components/profile/ProfileCard';
 
-const Profile = () => {
+const EditProfile = () => {
 	return (
 		<AuthenticatedApp>
 			<div className='h-screen w-full flex justify-center items-center'>
 				<Background>
-					<ProfileCard />
+					<NewProfileForm />
 				</Background>
 			</div>
 		</AuthenticatedApp>
 	);
 };
 
-export default Profile;
+export default EditProfile;

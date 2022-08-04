@@ -1,5 +1,5 @@
 import { FastifyPluginAsync } from 'fastify';
-import { ProfileModel } from '../profile.model';
+import { profileModel } from '../profile.model';
 
 export const createProfile: FastifyPluginAsync = async (app) => {
 	app.post<{
@@ -18,7 +18,7 @@ export const createProfile: FastifyPluginAsync = async (app) => {
 		console.log(data);
 		const { auth0Id, firstName, lastName, email, address, contact, favoriteFamilies } = data;
 
-        const doc = await ProfileModel.create({
+        const doc = await profileModel.create({
 			auth0Id,
 			firstName,
 			lastName,

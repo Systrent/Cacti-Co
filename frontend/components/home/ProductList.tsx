@@ -1,10 +1,9 @@
 import useSWR from 'swr';
-import { publicFetcher } from '../../lib/publicFetcher';
 import { Spinner } from '../shared/Spinner';
 import { ProductCard } from './ProductCard';
 
 export const ProductList = () => {
-	const { data } = useSWR('/products', publicFetcher, {
+	const { data } = useSWR('/products', {
 		refreshInterval: 4000,
 	});
 
