@@ -1,6 +1,7 @@
-import { Header } from "./Header";
-import { injectGlobal } from "@emotion/css";
-import { Footer } from "./Footer";
+import tw from 'twin.macro';
+import { Header } from './Header';
+import { injectGlobal } from '@emotion/css';
+import { Footer } from './Footer';
 
 injectGlobal`
     @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Secular+One&display=swap');
@@ -13,11 +14,9 @@ injectGlobal`
 `;
 
 export const Layout = ({ children }) => (
-  <div
-    className="min-h-screen"
-  >
-    <Header />
-      {children}
-    <Footer />
-  </div>
+    <div tw='min-h-screen'>
+        <Header />
+        {children}
+        <Footer />
+    </div>
 );

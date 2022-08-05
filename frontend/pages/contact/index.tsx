@@ -1,10 +1,11 @@
-const Contact = () => {
+import { Background } from '../../components/shared/Background';
 
-  return(
-    <div>
-      HOLA
-    </div>
-  );
+const Contact = () => {
+    return (
+        <div>
+            <Background>Hola</Background>
+        </div>
+    );
 };
 
 export default Contact;

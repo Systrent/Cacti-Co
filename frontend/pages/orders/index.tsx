@@ -1,9 +1,11 @@
+import { Background } from '../../components/shared/Background';
+
 const Orders = () => {
-  return(
-    <div>
-      HOLA
-    </div>
-  );
+    return (
+        <div>
+            <Background>Hola</Background>
+        </div>
+    );
 };
 
 export default Orders;
