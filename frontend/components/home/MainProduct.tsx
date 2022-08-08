@@ -10,7 +10,7 @@ export interface ProductProps {
 
 export const MainProduct: React.FC<ProductProps> = ({ image, name, description, price }) => {
     return (
-        <div tw='h-3/5 w-full pb-2 flex flex-col justify-between items-center border-solid border-2 border-white/30 bg-white/25 shadow-sm backdrop-blur-sm rounded-3xl overflow-hidden'>
+        <div tw='h-4/5 w-full pb-2 flex flex-col justify-between items-center border-solid border-2 border-white/30 bg-white/25 shadow-sm backdrop-blur-sm rounded-3xl overflow-hidden'>
             <div tw='h-3/4 w-full'>
                 <img src={image} tw='h-full w-full object-cover items-center' />
             </div>

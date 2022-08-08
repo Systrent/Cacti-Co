@@ -1,6 +1,6 @@
 import { Background } from '../../components/shared/Background';
 
-const Contact = () => {
+const Weather = () => {
     return (
         <div>
             <Background>Hola</Background>
@@ -8,4 +8,4 @@ const Contact = () => {
     );
 };
 
-export default Contact;
+export default Weather;

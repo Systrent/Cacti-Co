@@ -2,6 +2,7 @@ import tw from 'twin.macro';
 import { HeaderButton } from './HeaderButton';
 import { LoginButton } from './LoginButton';
 import { Logo } from './Logo';
+import { FaStore, FaInfo, FaInfoCircle, FaShopify, FaHome, FaCloudSun } from 'react-icons/fa';
 
 export const MainMenu = () => {
     return (
@@ -12,11 +13,19 @@ export const MainMenu = () => {
                     <Logo title='cacti-co' />
                 </button>
             </div>
-            <div>
-                <HeaderButton title='Home' href='/' />
-                <HeaderButton title='Orders' href='/orders' />
-                <HeaderButton title='Info' href='/info' />
-                <HeaderButton title='Contact' href='/contact' />
+            <div tw='flex'>
+                <HeaderButton href='/'>
+                    <FaHome tw='text-2xl' />
+                </HeaderButton>
+                <HeaderButton href='/info'>
+                    <FaInfoCircle tw='text-xl' />
+                </HeaderButton>
+                <HeaderButton href='/weather'>
+                    <FaCloudSun tw='text-2xl' />
+                </HeaderButton>
+                <HeaderButton href='/orders'>
+                    <FaShopify tw='text-xl' />
+                </HeaderButton>
             </div>
             <div>
                 <LoginButton />

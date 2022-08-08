@@ -2,6 +2,7 @@ import tw from 'twin.macro';
 import { useAuth0 } from '@auth0/auth0-react';
 import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FaUser } from 'react-icons/fa';
 
 export const LoginButton: React.FC = () => {
     const { loginWithRedirect, user, logout } = useAuth0();
@@ -10,10 +11,10 @@ export const LoginButton: React.FC = () => {
         <div tw='flex'>
             {!user && (
                 <button
-                    tw='bg-transparent hover:bg-[#4BC190] hover:text-white whitespace-nowrap text-white text-sm font-medium tracking-wide rounded-lg ease-in-out duration-200 py-1 px-6'
+                    tw='flex h-8 bg-transparent items-center hover:bg-[#4BC190] hover:text-white whitespace-nowrap text-white text-sm font-medium tracking-wide rounded-lg ease-in-out duration-200 px-12'
                     onClick={() => loginWithRedirect()}
                 >
-                    Login
+                    <FaUser tw='text-xl' />
                 </button>
             )}
             {user && (
