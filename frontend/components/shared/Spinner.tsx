@@ -3,11 +3,11 @@ import { css, keyframes } from '@emotion/react';
 
 const scaleout = keyframes`
   0% {
-    transform: scale(0) 
+      transform: scale(0) 
   }
   100% {
-    transform: scale(1.0);
-    opacity: 0;
+      transform: scale(1.0);
+      opacity: 0;
   }
 `;
 

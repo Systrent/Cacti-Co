@@ -8,14 +8,14 @@ export const ProfileCard = () => {
     const { auth0Token } = useToken();
     const token = auth0Token.value;
 
-    //!ERROR
-    // const { data } = useSWR('/profile/find', authenticatedFetcher, {
-    // 	refreshInterval: 5000,
-    // });
-
-    const { data } = useSWR('/profile/find', {
-        refreshInterval: 5000,
+    
+    const { data } = useSWR('/profile/find', authenticatedFetcher(token), {
+    	refreshInterval: 5000,
     });
+
+    // const { data } = useSWR('/profile/find', {
+    //     refreshInterval: 5000,
+    // });
     console.log(data);
 
     // const productsData = data?.data.products.edges;

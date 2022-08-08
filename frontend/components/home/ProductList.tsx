@@ -13,7 +13,7 @@ export const ProductList = () => {
 
     return (
         <div tw='flex gap-2'>
-            {productsData?.length > 0 ? productsData.map((edge, index) => <ProductCard product={edge.node} key={index} />) : <Spinner />}
+            {productsData?.length > 0 ? productsData.map((item, index) => <ProductCard product={item.node} key={index} />) : <Spinner />}
         </div>
     );
-};
+};  

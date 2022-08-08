@@ -1,10 +1,10 @@
 import cors from '@fastify/cors';
 import auth0Verify from 'fastify-auth0-verify';
 import { FastifyPluginAsync } from 'fastify';
-import { shopifyAPI } from './shopifyAPI';
+import { allProductsQuery, checkoutMutation, singleProductQuery} from './shopify/shopifyAPI';
 import { dbPlugin } from './db';
-import { findProfile } from './routes/findProfile';
-import { createProfile } from './routes/createProfile';
+import { findProfile } from './routes/profile/findProfile';
+import { createProfile } from './routes/profile/createProfile';
 
 // const adminPlugin: FastifyPluginAsync = async (app) => {
 // 	app.addHook('preValidation', app.authenticate);
@@ -22,7 +22,9 @@ export const app: FastifyPluginAsync = async (app) => {
 	app.register(cors);
 
 	//Shopify
-	app.register(shopifyAPI, { prefix: 'products' });
+	app.register(allProductsQuery, { prefix: 'products' });
+	app.register(singleProductQuery, { prefix: 'products' });
+	app.register(checkoutMutation, { prefix: 'products' });
 
 	//User Profile
 	app.register(findProfile, { prefix: 'profile' });

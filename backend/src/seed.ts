@@ -1,9 +1,9 @@
 import mongoose from 'mongoose';
 import { MONGODB_URL } from './config';
-import { ProfileModel } from './profile.model';
+import { profileModel } from './profile.model';
 
 const createProfileExample = async () => {
-	await ProfileModel.create(
+	await profileModel.create(
         {
             auth0Id: 'github|58349789',
             firstName: 'Juan Pablo',
@@ -20,7 +20,7 @@ const createProfileExample = async () => {
 	await mongoose.connect(MONGODB_URL);
 
 	try {
-		await ProfileModel.collection.drop();
+		await profileModel.collection.drop();
 	} catch (error) {
 		console.log('No data found');
 	}
