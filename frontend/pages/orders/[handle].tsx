@@ -1,28 +1,15 @@
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    theme: {
-      extend: {
-        gridTemplateRows: {
-          '[auto,auto,1fr]': 'auto auto 1fr',
-        },
-      },
-    },
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/
 import tw from 'twin.macro';
 import { useState } from 'react';
+import axios from 'axios';
+import { CheckoutForm } from '../../components/orders/checkoutForm';
+
+export async function getServerSideProps(ctx) {
+    console.log(ctx.params);
+    const res = await axios.post('http://0.0.0.0:5000/products/single', { handle: ctx.params.handle });
+    return {
+        props: { product: res.data },
+    };
+}
 
 const product = {
     name: 'Basic Tee 6-Pack',
@@ -72,12 +59,17 @@ const product = {
         'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
 };
 
-const Example = () => {
+const Example = ( props ) => {
+    console.log('-- HANDLE --', props);
+
+    const variantId = props.product.data.productByHandle.variants.edges[0].node.id;
+    console.log(variantId);
+
     const [selectedColor, setSelectedColor] = useState(product.colors[0]);
     const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
 
     return (
-        <div className='bg-white'>
+        <div className='bg-slate-300'>
             <div className='pt-6'>
                 {/* Image gallery */}
                 <div className='mt-6 max-w-2xl mx-auto sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8'>
@@ -109,14 +101,7 @@ const Example = () => {
                         <p className='text-3xl text-gray-900'>{product.price}</p>
 
                         {/* Reviews */}
-                        <form className='mt-10'>
-                            <button
-                                type='submit'
-                                className='mt-10 w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                            >
-                                Add to bag
-                            </button>
-                        </form>
+                        <CheckoutForm variantId={variantId} />
                     </div>
 
                     <div className='py-10 lg:pt-6 lg:pb-16 lg:col-start-1 lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8'>
@@ -155,6 +140,6 @@ const Example = () => {
             </div>
         </div>
     );
-}
+};
 
 export default Example;

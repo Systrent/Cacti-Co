@@ -18,7 +18,6 @@ const server: FastifyInstance = fastify({
 
 server.register(blipp);
 server.register(app);
-
 server
     .listen({
         port: parseInt(PORT || '5000'),

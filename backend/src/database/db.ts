@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 import { FastifyPluginAsync } from 'fastify';
-import { MONGODB_URL } from './config';
+import { MONGODB_URL } from '../config';
 
 export const dbPlugin: FastifyPluginAsync = async (app) => {
     app.log.info(`----> Connecting database...`);
