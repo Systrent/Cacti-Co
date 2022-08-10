@@ -1,7 +1,7 @@
 import tw from 'twin.macro';
 import { useState } from 'react';
 import axios from 'axios';
-import { CheckoutForm } from '../../components/orders/checkoutForm';
+import { CheckoutForm } from '../../components/orders/CheckoutForm';
 
 export async function getServerSideProps(ctx) {
     console.log(ctx.params);
