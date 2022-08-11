@@ -1,15 +1,8 @@
 import tw from 'twin.macro';
 import { useState } from 'react';
 import axios from 'axios';
-import { CheckoutForm } from '../../components/orders/CheckoutForm';
+import { CheckoutButton } from '../../components/orders/CheckoutButton';
 
-export async function getServerSideProps(ctx) {
-    console.log(ctx.params);
-    const res = await axios.post('http://0.0.0.0:5000/products/single', { handle: ctx.params.handle });
-    return {
-        props: { product: res.data },
-    };
-}
 
 const product = {
     name: 'Basic Tee 6-Pack',
@@ -101,7 +94,7 @@ const Example = ( props ) => {
                         <p className='text-3xl text-gray-900'>{product.price}</p>
 
                         {/* Reviews */}
-                        <CheckoutForm variantId={variantId} />
+                        <CheckoutButton variantId={variantId} />
                     </div>
 
                     <div className='py-10 lg:pt-6 lg:pb-16 lg:col-start-1 lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8'>

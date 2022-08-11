@@ -12,8 +12,14 @@ export const ProductList = () => {
     console.log(productsData);
 
     return (
-        <div tw='flex gap-2'>
-            {productsData?.length > 0 ? productsData.map((item, index) => <ProductCard product={item.node} key={index} />) : <Spinner />}
+        <div tw='flex flex-wrap gap-2'>
+            {productsData?.length > 0 ? (
+                productsData.map((item, index) => <ProductCard product={item.node} key={index} />)
+            ) : (
+                <div tw='w-full h-full flex justify-center items-center'>
+                    <Spinner />
+                </div>
+            )}
         </div>
     );
-};  
+};

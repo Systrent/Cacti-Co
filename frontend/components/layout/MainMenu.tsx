@@ -15,13 +15,13 @@ export const MainMenu = () => {
             </div>
             <div tw='flex'>
                 <HeaderButton href='/'>
-                    <FaHome tw='text-2xl' />
+                    <FaHome tw='text-xl' />
                 </HeaderButton>
                 <HeaderButton href='/info'>
-                    <FaInfoCircle tw='text-xl' />
+                    <FaInfoCircle tw='text-lg' />
                 </HeaderButton>
                 <HeaderButton href='/weather'>
-                    <FaCloudSun tw='text-2xl' />
+                    <FaCloudSun tw='text-xl' />
                 </HeaderButton>
                 <HeaderButton href='/orders'>
                     <FaShopify tw='text-xl' />
