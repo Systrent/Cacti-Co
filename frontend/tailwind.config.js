@@ -4,8 +4,8 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                'secular-one': ['"Secular One"'],
-                'quicksand': ['"Quicksand"'],
+                'quicksand': ['"Quicksand"', 'sans-serif'],
+                'staaliches': ['"Staatliches"', 'sans-serif'],
             },
         },
     },

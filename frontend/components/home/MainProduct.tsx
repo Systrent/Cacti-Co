@@ -16,7 +16,7 @@ export const MainProduct: React.FC<ProductProps> = ({ image, name, description, 
             </div>
             <div tw='w-full h-full  flex flex-col justify-center px-4'>
                 <h2
-                    tw='font-secular-one font-bold tracking-wide text-white text-2xl'
+                    tw='font-staaliches tracking-wide text-white text-3xl'
                     css={css`
                         text-shadow: 0 0 4px #062821;
                     `}
