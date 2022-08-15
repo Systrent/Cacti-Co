@@ -6,7 +6,7 @@ import { useEffect, useRef } from 'react';
 
 export const ProductCard: React.FC<{ product: any }> = ({ product }) => {
     const ref = useRef(null);
-
+    
     const handleMouseHover = (event) => {
         const { clientX, clientY, currentTarget } = event;
         const { clientWidth, clientHeight, offsetLeft, offsetTop } = currentTarget;

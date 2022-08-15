@@ -4,6 +4,21 @@ import { Spinner } from '../shared/Spinner';
 import { ProductCard } from './ProductCard';
 
 export const ProductList = () => {
+    //*Validado
+
+    // const { getAccessTokenSilently } = useAuth0();
+    // const [token, setToken] = useState('');
+
+    // useEffect(() => {
+    //         getAccessTokenSilently().then(setToken);
+    // }, []);
+
+    // const { data } = useSWR('/products', authenticatedFetcher(token), {
+    //     refreshInterval: 4000,
+    // });
+
+    // BACKEND: app.get('/', {preValidation: app.authenticate}, async (req, res) => {
+
     const { data } = useSWR('/products', {
         refreshInterval: 4000,
     });
