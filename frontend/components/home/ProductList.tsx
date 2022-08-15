@@ -4,7 +4,7 @@ import { Spinner } from '../shared/Spinner';
 import { ProductCard } from './ProductCard';
 
 export const ProductList = () => {
-    //*Validado
+    //*Validated
 
     // const { getAccessTokenSilently } = useAuth0();
     // const [token, setToken] = useState('');

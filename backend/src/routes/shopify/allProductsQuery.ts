@@ -3,8 +3,9 @@ import { FastifyPluginAsync } from 'fastify';
 import { SHOPIFY_SHOP, SHOPIFY_STOREFRONT_ACCESS_TOKEN } from '../../config';
 
 export const allProductsQuery: FastifyPluginAsync = async (app) => {
+    //*Validated
     // app.get('/', {preValidation: app.authenticate}, async (req, res) => {
-    app.get('/', {preValidation: app.authenticate}, async (req, res) => {
+    app.get('/', async (req, res) => {
         // Load the access token as per instructions above
         const storefrontAccessToken: string = SHOPIFY_STOREFRONT_ACCESS_TOKEN;
 
@@ -55,5 +56,3 @@ export const allProductsQuery: FastifyPluginAsync = async (app) => {
         }
     });
 };
-
-
