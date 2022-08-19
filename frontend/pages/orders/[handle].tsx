@@ -1,7 +1,7 @@
-import tw from 'twin.macro';
-import { useState } from 'react';
 import axios from 'axios';
+import tw from 'twin.macro';
 import { CheckoutButton } from '../../components/orders/CheckoutButton';
+import { Spinner } from '../../components/shared/Spinner';
 
 
 const product = {
@@ -52,14 +52,19 @@ const product = {
         'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
 };
 
+export async function getServerSideProps(ctx) {
+    console.log(ctx.params);
+    const res = await axios.post('http://0.0.0.0:5000/products/single', { handle: ctx.params.handle });
+    return {
+        props: { product: res.data },
+    };
+}
+
 const Example = ( props ) => {
     console.log('-- HANDLE --', props);
 
     const variantId = props.product.data.productByHandle.variants.edges[0].node.id;
     console.log(variantId);
-
-    const [selectedColor, setSelectedColor] = useState(product.colors[0]);
-    const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
 
     return (
         <div className='bg-slate-300'>
@@ -93,8 +98,8 @@ const Example = ( props ) => {
                         <h2 className='sr-only'>Product information</h2>
                         <p className='text-3xl text-gray-900'>{product.price}</p>
 
-                        {/* Reviews */}
-                        <CheckoutButton variantId={variantId} />
+                        {/* Checkout */}
+                        { variantId ? <CheckoutButton variantId={variantId} /> : <Spinner />}
                     </div>
 
                     <div className='py-10 lg:pt-6 lg:pb-16 lg:col-start-1 lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8'>

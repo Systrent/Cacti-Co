@@ -6,8 +6,8 @@ interface LogoProps {
 
 export const Logo: React.FC<LogoProps> = ({ title }) => {
     return (
-        <div>
-            <h2 tw="font-quicksand text-2xl font-bold text-white leading-5 whitespace-nowrap">{title}</h2>
+        <div tw='w-32 h-10 flex items-center justify-center'>
+            <h1 tw="font-quicksand text-3xl font-bold text-white leading-6 whitespace-nowrap">{title}</h1>
         </div>
     );
 };

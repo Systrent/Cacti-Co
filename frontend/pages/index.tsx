@@ -5,7 +5,7 @@ const Page = () => {
 	return (
         <div>
             <Background>
-                <HomeSection imageCactus={'images/cactus_2.png'} />
+                <HomeSection />
             </Background>
         </div>
     );

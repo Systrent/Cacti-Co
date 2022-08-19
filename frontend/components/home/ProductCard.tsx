@@ -33,7 +33,7 @@ export const ProductCard: React.FC<{ product: any }> = ({ product }) => {
     return (
         <div
             ref={ref}
-            tw='h-52 w-[33%] flex flex-col border-solid border-2 border-white/30 bg-white/25 shadow-sm backdrop-blur-sm rounded-3xl overflow-hidden cursor-pointer'
+            tw='h-52 w-[30%] flex flex-col border-solid border-2 border-white/30 bg-white/25 shadow-sm backdrop-blur-sm rounded-3xl overflow-hidden cursor-pointer'
         >
             <Link href={`/orders/${product.handle}`}>
                 <a tw='h-full w-full flex flex-col'>
@@ -43,11 +43,11 @@ export const ProductCard: React.FC<{ product: any }> = ({ product }) => {
                             background-image: url(${product.images.edges[0].node.transformedSrc});
                         `}
                     ></div>
-                    <div tw='px-3 py-1'>
-                        <h2 tw='font-bold tracking-wide text-[#062821] text-[13px] leading-3'>{product.title}</h2>
+                    <div tw='px-3 py-2'>
+                        <h2 tw='font-bold tracking-wide text-[#062821] text-sm leading-3'>{product.title}</h2>
                     </div>
-                    <div tw='px-3 py-1 bg-white/75 flex justify-center items-center'>
-                        <h2 tw='font-bold tracking-wide text-[#062821] text-[15px] leading-3'>
+                    <div tw='px-3 py-2 bg-white/75 flex justify-center items-center'>
+                        <h2 tw='font-bold tracking-wide text-[#062821] text-base leading-3'>
                             {formatCurrency(product.priceRange.minVariantPrice.amount)}
                         </h2>
                     </div>

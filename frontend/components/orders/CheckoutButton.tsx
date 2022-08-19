@@ -6,8 +6,8 @@ export const CheckoutButton = ({ variantId }) => {
     const url = data?.data.checkoutCreate.checkout.webUrl;
 
     return (
-        <div tw='flex flex-col justify-center items-center w-full h-screen'>
-            <a href={url} target='_blank'>
+        <div tw='flex flex-col justify-center items-center w-full h-screen cursor-pointer'>
+            <a type='button' href={url} target='_blank'>
                 Buy product
             </a>
         </div>
