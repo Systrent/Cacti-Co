@@ -10,7 +10,7 @@ export const ProductCard: React.FC<{ product: any }> = ({ product }) => {
     const handleMouseHover = (event) => {
         const { clientX, clientY, currentTarget } = event;
         const { clientWidth, clientHeight, offsetLeft, offsetTop } = currentTarget;
-        const threshold = 7;
+        const threshold = 4;
         const card = ref.current;
         const horizontal = (clientX - offsetLeft) / clientWidth;
         const vertical = (clientY - offsetTop) / clientHeight;
@@ -33,7 +33,7 @@ export const ProductCard: React.FC<{ product: any }> = ({ product }) => {
     return (
         <div
             ref={ref}
-            tw='h-52 w-[30%] flex flex-col border-solid border-2 border-white/30 bg-white/25 shadow-sm backdrop-blur-sm rounded-3xl overflow-hidden cursor-pointer'
+            tw='h-[30%] w-[45%] lg:(h-[30%] w-[30%]) flex flex-col border-solid border-2 border-white/30 bg-white/25 shadow-sm backdrop-blur-sm rounded-3xl overflow-hidden cursor-pointer'
         >
             <Link href={`/orders/${product.handle}`}>
                 <a tw='h-full w-full flex flex-col'>

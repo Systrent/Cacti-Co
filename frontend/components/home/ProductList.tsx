@@ -27,7 +27,7 @@ export const ProductList = () => {
     console.log(productsData);
 
     return (
-        <div tw='h-full w-full flex flex-wrap gap-2'>
+        <div tw='h-full w-full flex flex-wrap gap-2 justify-end items-center overflow-auto pr-2'>
             {productsData?.length > 0 ? (
                 productsData.map((item, index) => <ProductCard product={item.node} key={index} />)
             ) : (

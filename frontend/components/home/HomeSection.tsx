@@ -1,11 +1,13 @@
 import tw from 'twin.macro';
 import { MainProduct } from './MainProduct';
 import { ProductList } from './ProductList';
+import { SectionTitle } from './SectionTitle';
 
 export const HomeSection = () => {
     return (
-        <div tw='w-full h-screen flex px-10 py-24 gap-10'>
-            <div tw='h-full w-1/2 flex flex-col justify-center items-center'>
+        <section tw='w-full h-screen flex px-10 py-24 lg:(gap-4) gap-2'>
+            <div tw='h-full w-1/2 flex justify-center items-center gap-2'>
+                <SectionTitle title={'Featured'} />
                 <MainProduct
                     image='/images/cactus_2.png'
                     name='Astrophytum Asterias V Type'
@@ -13,9 +15,10 @@ export const HomeSection = () => {
                     price={10}
                 />
             </div>
-            <div tw='h-full w-1/2 flex flex-col justify-center items-center'>
+            <div tw='h-full w-1/2 flex justify-center items-center gap-2'>
                 <ProductList />
+                <SectionTitle title={'Products'} />
             </div>
-        </div>
+        </section>
     );
 };

@@ -3,9 +3,9 @@ import { Header } from './Header';
 import { Footer } from './Footer';
 
 export const Layout = ({ children }) => (
-    <div tw='min-h-screen'>
+    <header tw='min-h-screen'>
         <Header />
         {children}
         <Footer />
-    </div>
+    </header>
 );

@@ -42,7 +42,7 @@ export const AuthenticatedApp = ({ children }) => {
             clientId={process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID}
             redirectUri={origin}
             audience='cacti-co'
-            scope='openid profile email'
+            scope='profile email openid create:product delete:product read:product'
         >
             <AuthenticatedApp2>{children}</AuthenticatedApp2>
         </Auth0Provider>

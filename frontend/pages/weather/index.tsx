@@ -1,9 +1,12 @@
 import { Background } from '../../components/shared/Background';
+import { WeatherSection } from '../../components/weather/WeatherSection';
 
 const Weather = () => {
     return (
         <div>
-            <Background>Hola</Background>
+            <Background>
+                <WeatherSection />
+            </Background>
         </div>
     );
 };

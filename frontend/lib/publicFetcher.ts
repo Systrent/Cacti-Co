@@ -1,6 +1,6 @@
-import { shopifyAPI } from './shopifyAPI';
+import { backendAPI } from './backendAPI';
 
 export const publicFetcher = async (key: string) => {
-    const res = await shopifyAPI.get(key);
+    const res = await backendAPI.get(key);
     return res.data;
 };

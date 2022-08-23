@@ -101,6 +101,102 @@ Project dependencies:
 <br>
 <br>
 
+## **⊙ Structure**
+
+---
+
+### — Frontend:
+```
+├───📁 components/
+│   ├───📁 home/
+│   │   ├───📄 HomeSection.tsx
+│   │   ├───📄 MainProduct.tsx
+│   │   ├───📄 ProductCard.tsx
+│   │   ├───📄 ProductList.tsx
+│   │   └───📄 SectionTitle.tsx
+│   ├───📁 info/
+│   │   ├───📄 InputButton.tsx
+│   │   └───📄 NewCactusForm.tsx
+│   ├───📁 layout/
+│   │   ├───📄 Footer.tsx
+│   │   ├───📄 Header.tsx
+│   │   ├───📄 HeaderButton.tsx
+│   │   ├───📄 Layout.tsx
+│   │   ├───📄 LoginButton.tsx
+│   │   ├───📄 Logo.tsx
+│   │   └───📄 MainMenu.tsx
+│   ├───📁 orders/
+│   │   ├───📄 CheckoutButton.tsx
+│   │   └───📄 OrdersSection.tsx
+│   ├───📁 profile/
+│   │   ├───📄 FavoriteProducts.tsx
+│   │   ├───📄 InputButton.tsx
+│   │   ├───📄 NewProfileForm.tsx
+│   │   └───📄 ProfileCard.tsx
+│   ├───📁 shared/
+│   │   ├───📄 AuthenticatedApp.tsx
+│   │   ├───📄 Background.tsx
+│   │   ├───📄 Spinner.tsx
+│   │   └───📄 TokenApp.tsx
+│   └───📁 weather/
+│       ├───📄 NewRecommendation.tsx
+│       └───📄 WeatherSection.tsx
+├───📁 lib/
+│   ├───📁 recommendation/
+│   │   ├───📄 createRecommendation.ts
+│   │   └───📄 deleteRecommendation.ts
+│   ├───📄 authenticatedFetcher.ts
+│   ├───📄 backendAPI.ts
+│   ├───📄 formatCurrency.ts
+│   ├───📄 profile.repo.ts
+│   ├───📄 publicFetcher.ts
+│   └───📄 tokenContext.ts
+├───📁 pages/
+│   ├───📁 info/
+│   │   └───📄 index.tsx
+│   ├───📁 orders/
+│   │   ├───📄 index.tsx
+│   │   └───📄 [handle].tsx
+│   ├───📁 profile/
+│   │   └───📄 index.tsx
+│   ├───📁 weather/
+│   │   └───📄 index.tsx
+│   ├───📄 index.tsx
+│   ├───📄 _app.tsx
+│   └───📄 _document.tsx
+├───📁 public/
+│   └───📁 images/
+│       ├───📄 cacti_co_favicon.svg
+│       ├───📄 cacti_co_logo.svg
+│       ├───📄 cacti_co_pet.svg
+│       ├───📄 cactus_2.png
+│       ├───📄 product_1.png
+│       ├───📄 product_10.png
+│       ├───📄 product_2.png
+│       ├───📄 product_3.png
+│       ├───📄 product_4.png
+│       ├───📄 product_5.png
+│       ├───📄 product_6.png
+│       ├───📄 product_7.png
+│       ├───📄 product_8.png
+│       └───📄 product_9.png
+├───📁 styles/
+│   └───📄 globals.css
+├───📁 types/
+│   └───📄 emotion.d.ts
+├───📄 .babelrc
+├───📄 .gitignore
+├───📄 next-env.d.ts
+├───📄 package.json
+├───📄 postcss.config.js
+├───📄 tailwind.config.js
+├───📄 tsconfig.json
+└───📄 yarn.lock
+```
+
+<br>
+<br>
+
 ## **⊙ Licenses**
 
 ---

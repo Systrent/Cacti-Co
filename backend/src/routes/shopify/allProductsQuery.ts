@@ -19,7 +19,7 @@ export const allProductsQuery: FastifyPluginAsync = async (app) => {
         try {
             const products: any = await storefrontClient.query({
                 data: `{
-                    products(first: 3) {
+                    products(first: 9) {
                         edges {
                             node {
                                 id

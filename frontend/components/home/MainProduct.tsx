@@ -14,7 +14,7 @@ export const MainProduct: React.FC<ProductProps> = ({ image, name, description, 
             <div tw='h-3/4 w-full'>
                 <img src={image} tw='h-full w-full object-cover items-center' />
             </div>
-            <div tw='w-full h-full  flex flex-col justify-center px-4'>
+            <div tw='w-full h-full flex flex-col justify-center px-10'>
                 <h2
                     tw='font-staaliches tracking-wide text-white text-4xl'
                     css={css`

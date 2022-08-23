@@ -14,7 +14,7 @@ export const TokenApp = ({ children }) => {
             clientId={process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID}
             redirectUri={origin}
             audience='cacti-co'
-            scope='openid profile email'
+            scope='create:product delete:product read:product'
         >
             {children}
         </Auth0Provider>

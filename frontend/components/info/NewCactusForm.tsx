@@ -2,8 +2,6 @@ import tw from 'twin.macro';
 import { useForm } from 'react-hook-form';
 import { InputButton } from '../profile/InputButton';
 
-// TODO: Continue class video w15d1 (2h 26min)
-
 export const NewCactusForm = () => {
     const {
         register,
@@ -16,6 +14,7 @@ export const NewCactusForm = () => {
         console.log('HANDLE SUBMIT');
         console.log(data);
     });
+    
     return (
         <div tw='flex flex-col justify-center items-center w-full h-screen'>
             <div tw='flex flex-col'>
