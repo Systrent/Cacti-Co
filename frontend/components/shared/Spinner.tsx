@@ -14,13 +14,15 @@ export const Spinner = () => {
     `;
     
     return (
-        <div tw='w-full h-full flex justify-center items-center'>
-            <div
-                tw='w-16 h-16 bg-white rounded-full'
-                css={css`
-                    animation: ${scaleout} 1s infinite ease-in-out;
-                `}
-            />
-        </div>
+        <>
+            <div tw='w-full h-full flex justify-center items-center'>
+                <div
+                    tw='w-16 h-16 bg-white rounded-full'
+                    css={css`
+                        animation: ${scaleout} 1s infinite ease-in-out;
+                    `}
+                />
+            </div>
+        </>
     );
 };

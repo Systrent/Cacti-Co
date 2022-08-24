@@ -4,9 +4,9 @@ import { css } from '@emotion/react';
 import { formatCurrency } from '../../lib/extra/formatCurrency';
 import { useEffect, useRef } from 'react';
 
-export const ProductCard: React.FC<{ product: any }> = ({ product }) => {
+export const OrdersProductCard: React.FC<{ product: any }> = ({ product }) => {
     const ref = useRef(null);
-    
+
     const handleMouseHover = (event) => {
         const { clientX, clientY, currentTarget } = event;
         const { clientWidth, clientHeight, offsetLeft, offsetTop } = currentTarget;

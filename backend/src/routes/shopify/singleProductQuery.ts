@@ -3,10 +3,7 @@ import { FastifyPluginAsync } from 'fastify';
 import { SHOPIFY_SHOP, SHOPIFY_STOREFRONT_ACCESS_TOKEN } from '../../config';
 
 export const singleProductQuery: FastifyPluginAsync = async (app) => {
-    // app.get('/products', {preValidation: app.authenticate}, async (req, res) => {
     app.post<{ Body: { handle: string } }>('/single', async (req, res) => {
-        //Req
-        // req.body;
         const { handle } = req.body;
         console.log(req.body);
 

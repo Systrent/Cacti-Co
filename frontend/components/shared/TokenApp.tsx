@@ -9,14 +9,16 @@ export const TokenApp = ({ children }) => {
     }, []);
 
     return (
-        <Auth0Provider
-            domain={process.env.NEXT_PUBLIC_AUTH0_DOMAIN}
-            clientId={process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID}
-            redirectUri={origin}
-            audience='cacti-co'
-            scope='create:product delete:product read:product'
-        >
-            {children}
-        </Auth0Provider>
+        <>
+            <Auth0Provider
+                domain={process.env.NEXT_PUBLIC_AUTH0_DOMAIN}
+                clientId={process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID}
+                redirectUri={origin}
+                audience='cacti-co'
+                scope='create:product delete:product read:product'
+            >
+                {children}
+            </Auth0Provider>
+        </>
     );
 };

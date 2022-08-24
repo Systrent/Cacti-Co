@@ -10,7 +10,6 @@ export const createRecommendation: FastifyPluginAsync = async (app) => {
 	}>('/create', async (req, res) => {
 		const data: any = req.body;
 		req.log.info('Output');
-		console.log(data);
 		const { title, description } = data;
 
         const doc = await recommendationModel.create({

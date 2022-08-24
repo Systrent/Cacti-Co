@@ -1,12 +1,11 @@
 import tw from 'twin.macro';
-import { NewRecommendationForm } from './NewRecommendation';
 
-export const WeatherSection = () => {
+export const WeatherSection = ({ children }) => {
     return (
-        <section>
+        <>
             <div tw='w-full h-screen px-10 py-24'>
-                <NewRecommendationForm />
+                {children}
             </div>
-        </section>
+        </>
     );
 };

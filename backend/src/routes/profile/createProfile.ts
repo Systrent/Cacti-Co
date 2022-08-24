@@ -14,7 +14,6 @@ export const createProfile: FastifyPluginAsync = async (app) => {
 	}>('/create', async (req, res) => {
 		const data = req.body;
 		req.log.info('Output');
-		console.log(data);
 		const { auth0Id, firstName, lastName, email, address, contact } = data;
 
         const doc = await profileModel.create({

@@ -1,4 +1,4 @@
-import { backendAPI } from "./backendAPI";
+import { backendAPI } from "../connection/backendAPI";
 
 interface IProfile {
     auth0Id?: string;
@@ -12,7 +12,5 @@ interface IProfile {
 
 export const createProfile = async (data: IProfile) => {
     const res = await backendAPI.post('/profile/create', data);
-    console.log('CREATE USER');
-    console.log(res.data);
     return res.data;
 };

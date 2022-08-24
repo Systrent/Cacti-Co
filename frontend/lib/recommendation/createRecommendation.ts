@@ -1,4 +1,4 @@
-import { backendAPI } from "../backendAPI";
+import { backendAPI } from "../connection/backendAPI";
 
 interface IRecommendation {
     title: string;
@@ -7,6 +7,5 @@ interface IRecommendation {
 
 export const createRecommendation = async (data: IRecommendation ) => {
     const res = await backendAPI.post('recommendations/create', data);
-    console.log(res.data);
     return res.data;
 };

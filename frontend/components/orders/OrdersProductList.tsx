@@ -1,9 +1,10 @@
-import useSWR from 'swr';
 import tw from 'twin.macro';
+import useSWR from 'swr';
 import { Spinner } from '../shared/Spinner';
-import { ProductCard } from './ProductCard';
+import { OrdersProductCard } from './OrdersProductCard';
+import { OrdersSectionTitle } from './OrdersSectionTitle';
 
-export const ProductList = () => {
+export const OrdersProductList = () => {
     //*Validated
 
     // const { getAccessTokenSilently } = useAuth0();
@@ -26,15 +27,17 @@ export const ProductList = () => {
 
     return (
         <>
-            <div tw='h-full w-full flex flex-wrap gap-2 justify-end items-center overflow-auto pr-2'>
+            <OrdersSectionTitle title={'Buy>now'} />
+            <div tw='h-full w-full flex flex-wrap gap-2 justify-center items-center overflow-auto mr-2'>
                 {productsData?.length > 0 ? (
-                    productsData.map((item, index) => <ProductCard product={item.node} key={index} />)
+                    productsData.map((item, index) => <OrdersProductCard product={item.node} key={index} />)
                 ) : (
                     <div tw='w-full h-full flex justify-center items-center'>
                         <Spinner />
                     </div>
                 )}
             </div>
+            <OrdersSectionTitle title={'Buy<now'} />
         </>
     );
 };

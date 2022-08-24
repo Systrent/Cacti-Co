@@ -18,36 +18,40 @@
 <br>
 
 <div align="center">
-  <a href="https://reactnative.dev"
+
+<a href="https://reactnative.dev"><img alt="React Native" src="https://img.shields.io/badge/React%20Native-v-%23234256?style=for-the-badge&logo=react"/></a>
+
+<a href="https://reactnative.dev"
     ><img
       alt="React Native"
       src="https://img.shields.io/badge/React%20Native-v-%23234256?style=for-the-badge&amp;logo=appveyor"
   /></a>
-  <a href="https://nodejs.org/"
+<a href="https://nodejs.org/"
     ><img
       alt="Node JS"
       src="https://img.shields.io/badge/Node-v18.5.0-brightgreen?style=for-the-badge&amp;logo=appveyor"
   /></a>
-  <a href="https://yarnpkg.com"
+<a href="https://yarnpkg.com"
     ><img
       alt="YARN"
       src="https://img.shields.io/badge/YARN-v1.22.18-red?style=for-the-badge&amp;logo=appveyor"
   /></a>
-  <a href="https://www.typescriptlang.org/"
+<a href="https://www.typescriptlang.org/"
     ><img
       alt="Typescript"
       src="https://img.shields.io/badge/typescript-v4.6.4-%239cf?style=for-the-badge&amp;logo=appveyor"
   /></a>
-  <a href="https://es.shopify.com"
+<a href="https://es.shopify.com"
     ><img
       alt="Shopify"
       src="https://img.shields.io/badge/Shopify-v-yellow?style=for-the-badge&amp;logo=appveyor"
   /></a>
-  <a href="https://stripe.com/es-us"
+<a href="https://stripe.com/es-us"
     ><img
       alt="Stripe"
       src="https://img.shields.io/badge/Stripe-v-blueviolet?style=for-the-badge&amp;logo=appveyor"
   /></a>
+
 </div>
 
 <br>
@@ -56,7 +60,6 @@
 <div align="center">
     <p>🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿</p>
 </div>
-
 
 <br>
 <br>
@@ -106,6 +109,7 @@ Project dependencies:
 ---
 
 ### — Frontend:
+
 ```
 ├───📁 components/
 │   ├───📁 home/
@@ -200,6 +204,7 @@ Project dependencies:
 ## **⊙ Licenses**
 
 ---
+
 ```
 MIT License
 

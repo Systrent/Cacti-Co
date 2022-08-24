@@ -3,11 +3,11 @@ import { Background } from '../components/shared/Background';
 
 const Page = () => {
 	return (
-        <div>
+        <>
             <Background>
                 <HomeSection />
             </Background>
-        </div>
+        </>
     );
 };
 

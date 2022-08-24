@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 export const MainMenu = () => {
     return (
-        <div tw='w-3/4 flex justify-between items-center'>
+        <div tw='w-full px-10 lg:(w-3/4) flex justify-between items-center '>
             <Link href='/'>
                 <a tw='flex justify-center items-center gap-2 cursor-pointer'>
                     <img src='/images/cacti_co_logo.svg' width='18' height='36' alt='cacti_co_logo' />

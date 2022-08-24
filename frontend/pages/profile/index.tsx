@@ -1,18 +1,18 @@
 import { Background } from '../../components/shared/Background';
 import { AuthenticatedApp } from '../../components/shared/AuthenticatedApp';
-import { ProfileCard } from '../../components/profile/ProfileCard';
+import { WorkInProgress } from '../../components/maintenance/WorkInProgress';
 
 const Profile = () => {
     return (
-        <div>
+        <>
             <Background>
                 <AuthenticatedApp>
                     <div className='h-screen w-full flex justify-center items-center'>
-                        <ProfileCard />
+                        <WorkInProgress />
                     </div>
                 </AuthenticatedApp>
             </Background>
-        </div>
+        </>
     );
 };
 

@@ -9,7 +9,6 @@ export const createFavorite: FastifyPluginAsync = async (app) => {
 	}>('/create', async (req, res) => {
 		const data: any = req.body;
 		req.log.info('Output');
-		console.log(data);
 		const { auth0Id, productHandle } = data;
 
         const doc = await favoriteModel.create({

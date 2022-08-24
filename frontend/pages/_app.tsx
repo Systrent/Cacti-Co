@@ -2,7 +2,7 @@ import '../styles/globals.css';
 import Head from 'next/head';
 import { Layout } from '../components/layout/Layout';
 import { SWRConfig } from 'swr';
-import { publicFetcher } from '../lib/publicFetcher';
+import { publicFetcher } from '../lib/fetching/publicFetcher';
 import { AppProps } from 'next/app';
 import { GlobalStyles } from 'twin.macro';
 import { injectGlobal } from '@emotion/css';
@@ -20,7 +20,7 @@ injectGlobal`
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
     return (
-        <div>
+        <>
             <TokenApp>
                 <GlobalStyles />
                 <SWRConfig value={{ fetcher: publicFetcher }}>
@@ -32,7 +32,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
                     </Layout>
                 </SWRConfig>
             </TokenApp>
-        </div>
+        </>
     );
 };
 
