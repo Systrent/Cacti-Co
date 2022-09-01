@@ -1,12 +1,11 @@
 <div align="center">
-    <img src="./frontend/public/images/cacti_co_logo_2.svg" alt="cacti-co-logo" width="150"/>
+    <p>🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿</p>
 </div>
 
 <br>
-<br>
 
 <div align="center">
-    <p>🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿</p>
+    <img src="./frontend/public/images/cacti_co_logo_2.svg" alt="cacti-co-logo" width="125"/>
 </div>
 
 <br>
@@ -35,7 +34,6 @@
 
 </div>
 
-<br>
 <br>
 
 <div align="center">
