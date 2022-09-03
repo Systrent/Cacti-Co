@@ -29,7 +29,7 @@
 <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/Typescript-%23ffefdb?style=for-the-badge&logo=typescript" alt="Typescript" /></a>
 <a href="https://tailwindcss.com"><img src="https://img.shields.io/badge/Tailwindcss-%23c34a50?style=for-the-badge&logo=tailwindcss" alt="Tailwindcss" /></a>
 <a href="https://es.shopify.com/"><img src="https://img.shields.io/badge/Shopify-%236b3c7d?style=for-the-badge&logo=shopify" alt="Shopify" /></a>
-<a href="https://graphql.org"><img src="https://img.shields.io/badge/GraphQL-%23b19cd9?style=for-the-badge&logo=graphql" alt="GraphQL" /></a>
+<a href="https://graphql.org"><img src="https://img.shields.io/badge/GraphQL-%23ff631c?style=for-the-badge&logo=graphql" alt="GraphQL" /></a>
 <a href="https://auth0.com"><img src="https://img.shields.io/badge/Auth0-%23a6e6d9?style=for-the-badge&logo=auth0" alt="Auth0" /></a>
 
 </div>
